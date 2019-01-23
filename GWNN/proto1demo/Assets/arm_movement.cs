@@ -45,27 +45,28 @@ public class arm_movement : MonoBehaviour {
 
 
 
+        
+            if (Mathf.Abs(dz) > .1 || Mathf.Abs(dx) > .1) {
+            if (Input.GetAxis("Prim") > 0) {
+                Vector3 offset = new Vector3(dx, dz, 0);
+                Vector3 newPos = origin + (offset * radius);
+                transform.position = Vector3.Lerp(transform.position, newPos, .2f);
+            } else { Reset(); }
 
-        if (Mathf.Abs(dz) > .1  || Mathf.Abs(dx) > .1) {
 
-            Vector3 offset = new Vector3(dx, dz, 0);
-            Vector3 newPos = origin + (offset*radius);
-            transform.position = Vector3.Lerp(transform.position, newPos, .2f);
+                Debug.Log(Vector2.Distance(origin, transform.position));
+            } else {
 
-           
+                Reset();
 
-            Debug.Log(Vector2.Distance(origin, transform.position));
-        } else {
 
-          Reset();
-      
+
+            }
+
+
+
+        
          
-
-        }
-
-
-
-    
 
     }
 
