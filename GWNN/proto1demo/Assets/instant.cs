@@ -7,6 +7,8 @@ public class instant : MonoBehaviour {
     public Transform enem;
     private float spawnprob;
     public int probability = 100;
+    public bool enemies = true;
+
     // Use this for initialization
     void Start () {
 		
@@ -17,8 +19,10 @@ public class instant : MonoBehaviour {
         spawnprob= Random.Range(1, probability);
         Debug.Log(spawnprob);
         if (spawnprob == 3) {
-            Instantiate(enem, new Vector3(20, -3.4f, 0), Quaternion.identity);
-            Debug.Log("creature spawned");
+            if (enemies == true) {
+                Instantiate(enem, new Vector3(20, -3.4f, 0), Quaternion.identity);
+                Debug.Log("creature spawned");
+            }
         }
 	}
 }
