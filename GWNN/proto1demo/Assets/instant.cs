@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class instant : MonoBehaviour {
 
-    public Transform enem;
+    public GameObject enem;
     private float spawnprob;
     public int probability = 100;
     public bool enemies = true;
@@ -22,7 +22,7 @@ public class instant : MonoBehaviour {
         spawnprob= Random.Range(1, probability);
         if (spawnprob == 3) {
             if (enemies == true) {
-                Instantiate(enem, new Vector3(20, -3.4f, 0), Quaternion.identity);
+                Instantiate(enem, new Vector3(20, -3.4f, 0), Quaternion.Euler(0, 90, 0));
                 Debug.Log("creature spawned");
             }
         }
