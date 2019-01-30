@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class instant : MonoBehaviour {
+public class spawnEnemy : MonoBehaviour {
 
     public GameObject enem;
     private float spawnprob;

@@ -6,7 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
-public class move : MonoBehaviour {
+public class playerController: MonoBehaviour {
     //private Rigidbody2D mybody;
     private Rigidbody mybody;
     public float speed;

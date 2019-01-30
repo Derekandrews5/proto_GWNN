@@ -8,7 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class arm_movement : MonoBehaviour {
+public class armMovement : MonoBehaviour {
     public GameObject parent;
     public swordVelocity sword;
     private Vector3 movementVector;

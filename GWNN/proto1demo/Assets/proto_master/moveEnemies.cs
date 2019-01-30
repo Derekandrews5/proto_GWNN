@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class kill : MonoBehaviour {
-
+public class moveEnemies: MonoBehaviour {
+    public float Hspeed = 4;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,12 +11,7 @@ public class kill : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        transform.Translate(Vector3.back * Hspeed * Time.deltaTime); 
+        
 	}
-
-
-    void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "enemy")
-            Destroy(other.gameObject);
-    }
 }
